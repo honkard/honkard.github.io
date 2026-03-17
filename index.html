@@ -1048,6 +1048,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
+<script>
+  // Sağ tık engelle
+  document.addEventListener("contextmenu", e => e.preventDefault());
+
+  // F12, Ctrl+Shift+I, Ctrl+U engelle
+  document.addEventListener("keydown", function(e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && e.key === "I") ||
+      (e.ctrlKey && e.key === "u")
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 </body>
 </html>
